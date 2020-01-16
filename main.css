@@ -1,0 +1,43 @@
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: black;
+}
+
+.inner_header{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+}
+.logo_container
+{
+    height: 100%;
+    display: table;
+    float: left;
+}
+.logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 200;
+}
+.logo_container h1 span{
+    font-weight: 800;
+}
+
+.rock-image{
+    width: 170px;
+    border-radius: 50%;
+}
+.paper-image{
+    width:170px;
+}
+.scissor-image{
+    width: 170px;
+}
