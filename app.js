@@ -11,6 +11,7 @@ let totalLose = 0;
 let totalDraw = 0;
 
 
+
 playButton.addEventListener('click', () => {
     
     const radioButton = document.querySelector('input:checked');
