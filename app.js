@@ -2,45 +2,62 @@ const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset-button');
 const correctSPan = document.getElementById('correct');
 const totalSpan = document.getElementById('total');
-const resultSPan = document.getElementById('result');
+const resultSpan = document.getElementById('result');
 const sumSpan = document.getElementById('summary');
 
 let correctGuess = 0;
 let totalOfGuesses = 0;
 
 playButton.addEventListener('click', () => {
-    console.log ('its working');
+    
     const radioButton = document.querySelector('input:checked');
     const userGuess = radioButton.value;
+    console.log(userGuess);
 
-    totalOfGuesses = + 1
-    const oneZeroOrTwo = Math.round(Math.random() * 3);
+    totalOfGuesses++;
+    const oneZeroOrTwo = Math.round(Math.random() * 2);
+
     let randomHand;
+    console.log(oneZeroOrTwo);
 
     if (oneZeroOrTwo === 0) {
         randomHand = 'rock'; } 
-    else if (oneZeroOrTwo === 1) {
+    if (oneZeroOrTwo === 1) {
         randomHand = 'paper';}
-    else {
-        randomHand = 'scissor'; }  
+    if (oneZeroOrTwo === 2) {
+        randomHand = 'scissor'; } 
+
 
     let won;
 
     if (randomHand === userGuess){
-        won = true;}
+        won = true;
+        console.log('i won');
+    }
     else {
-        won = false; }
+        won = false; 
+    }
+
     if (won) {
-        correctGuess = + 1;
+
+        correctGuess++;
 
     }
+    resultSpan.textContent = randomHand;
+    sumSpan.classList.remove('hidden');
+    correctSPan.textContent = correctGuess;
+    totalSpan.textContent = totalOfGuesses;
 
 });
 
 resetButton.addEventListener('click', () => {
-    console.log ('its working too!')
+   
     correctGuess = 0;
     totalOfGuesses = 0;
-    
+    sumSpan.classList.add('hidden');
+    correctSPan.textContent = correctGuess;
+    totalSpan.textContent = totalOfGuesses;
 
-})
+
+});
+
