@@ -9,7 +9,7 @@ let correctGuess = 0;
 let totalOfGuesses = 0;
 
 playButton.addEventListener('click', () => {
-    console.log('its working');
+    console.log ('its working');
     const radioButton = document.querySelector('input:checked');
     const userGuess = radioButton.value;
 
@@ -38,6 +38,9 @@ playButton.addEventListener('click', () => {
 });
 
 resetButton.addEventListener('click', () => {
+    console.log ('its working too!')
     correctGuess = 0;
+    totalOfGuesses = 0;
+    
 
 })
