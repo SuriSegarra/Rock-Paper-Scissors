@@ -1,0 +1,72 @@
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: black;
+}
+
+.inner_header{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color:lightseagreen;
+}
+.logo_container
+{
+    height: 100%;
+    display: table;
+    float: left;
+}
+.logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 200;
+}
+.logo_container h1 span{
+    font-weight: 800;
+}
+
+.rock-image{
+    width: 150px;
+    border-radius: 50%;
+}
+.paper-image{
+    width:150px;
+}
+.scissor-image{
+    width: 150px;
+}
+.container{
+    margin-top: 50px;
+}
+#summary{
+    font-size: 20px;
+}
+summary{
+    font-size: 20px;
+}
+.instruction{
+    font-size: 20px;
+    margin-top: 20px;
+}
+#play-button{
+    background-color:green;
+    color:white;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 50px;
+}
+#reset-button{
+    background-color: red;
+    color:white;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 50px;
+}

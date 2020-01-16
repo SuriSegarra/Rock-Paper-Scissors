@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="app.js"></script>
+    <title>Rock-Paper-Scissor</title>
+</head>
+<body>
+    <header> 
+        <div class="header">
+            <div class="inner_header">
+                <div class="logo_container">
+                    <h1> Rock-Paper-Scissor<span> <span> Game</span></h1>
+                 </div>
+            </div>
+        </div>
+
+        <div class="instruction">
+            Instructions:
+            <p>paper beats rock, rock beats scissors, scissors beats papers</p>
+            <hr>
+            <label>
+                Rock
+                <input name="hand" value="rock" type="radio" checked />
+                <img class="rock-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_1280.png">
+            </label>
+            <label>
+                Paper
+                <input name="hand" value="paper" type="radio"/>
+                <img class="paper-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_1280.png">
+            </label>
+            <label>
+                Scissor
+                <input name="hand" value="scissor" type="radio"/>
+                <img class="scissor-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_1280.png">
+            </label>
+
+
+            <div class="container"> 
+
+                <summary id="summary" class="hidden"> computer choice: <span id="result"></span></summary>
+                <summary>Total losses:<span id="total"></span></summary>
+                <summary>Total won:<span id="correct"></span></summary>
+                <summary>Total Draw: <span id="draw"></span></summary>
+
+            </div>
+
+        </div>
+        <button id='play-button'>Play!</button>
+        <button id='reset-button'> Reset Game</button>
+
+
+</body>
+</html>
