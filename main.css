@@ -32,13 +32,13 @@
 }
 
 .rock-image{
-    width: 170px;
+    width: 150px;
     border-radius: 50%;
 }
 .paper-image{
-    width:170px;
+    width:150px;
 }
 .scissor-image{
-    width: 170px;
+    width: 150px;
 }
 
