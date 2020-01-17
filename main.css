@@ -3,6 +3,7 @@
     height: 80px;
     display: block;
     background-color: whitesmoke;
+    
 }
 
 .inner_header{
@@ -10,13 +11,13 @@
     height: 100%;
     display: block;
     margin: 0 auto;
-    background-color:
 }
 .logo_container
 {
     height: 100%;
     display: table;
     float: left;
+    
 }
 .logo_container h1{
     color: black;
@@ -26,6 +27,7 @@
     font-family: 'Montserrat';
     font-size: 32px;
     font-weight: 200;
+    text-align: center;
 }
 .logo_container h1 span{
     font-weight: 800;
@@ -75,3 +77,11 @@ summary{
  body{
      background-color: #487b88;
  }
+.container{
+    position: relative;
+    height: 85%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #2c3e50;
+}
