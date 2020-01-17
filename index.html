@@ -21,29 +21,37 @@
         <div class="instruction">
             Instructions:
             <p>paper beats rock, rock beats scissors, scissors beats papers</p>
-            <hr>
-            <label>
-                Rock
-                <input name="hand" value="rock" type="radio" checked />
-                <img class="rock-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_1280.png">
-            </label>
-            <label>
-                Paper
-                <input name="hand" value="paper" type="radio"/>
-                <img class="paper-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_1280.png">
-            </label>
-            <label>
-                Scissor
-                <input name="hand" value="scissor" type="radio"/>
-                <img class="scissor-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_1280.png">
-            </label>
+            
+            <div class="container">
+                <div class="score-container">
+                    YOU  <span id="correct"></span>
+                    <Span id="score"></Span> -
+                    <span id="total"></span>  COM
+                </div>
+            </div>
 
 
-            <div class="container"> 
+                <label>
+                    Rock 
+                    <input name="hand" value="rock" type="radio" checked />
+                    <img class="rock-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_1280.png">
+                </label>
+                <label>
+                    Paper
+                    <input name="hand" value="paper" type="radio"/>
+                    <img class="paper-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_1280.png">
+                </label>
+                <label>
+                    Scissor
+                    <input name="hand" value="scissor" type="radio"/>
+                    <img class="scissor-image" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_1280.png">
+                </label>
+            
+
+            <div> 
 
                 <summary id="summary" class="hidden"> computer choice: <span id="result"></span></summary>
-                <summary>Total losses:<span id="total"></span></summary>
-                <summary>Total won:<span id="correct"></span></summary>
+               
                 <summary>Total Draw: <span id="draw"></span></summary>
 
             </div>
@@ -52,6 +60,6 @@
         <button id='play-button'>Play!</button>
         <button id='reset-button'> Reset Game</button>
 
-
 </body>
+
 </html>

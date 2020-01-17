@@ -1,3 +1,4 @@
+//get DOM
 const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset-button');
 const correctSPan = document.getElementById('correct');
@@ -5,73 +6,76 @@ const totalSpan = document.getElementById('total');
 const resultSpan = document.getElementById('result');
 const sumSpan = document.getElementById('summary');
 const drawSpan = document.getElementById('draw');
-
+//initialize states
 let totalWin = 0;
 let totalLose = 0;
 let totalDraw = 0;
 
 
-
+//user interaction. interaction; click
 playButton.addEventListener('click', () => {
     
     const radioButton = document.querySelector('input:checked');
-    const userInput = radioButton.value;
+
+    const userInput = radioButton.value;//user choice, rock paper or scissors
+
     console.log(userInput);
+
 
    
 
-    const oneZeroOrTwo = Math.round(Math.random() * 2);
+    const computerChoice = Math.round(Math.random() * 2);
 
     let randomHand;
-    console.log(oneZeroOrTwo);
+    console.log(computerChoice);
 
-    if (oneZeroOrTwo === 0) {
+    if (computerChoice === 0) {
         randomHand = 'rock'; } 
-    if (oneZeroOrTwo === 1) {
+    if (computerChoice === 1) {
         randomHand = 'paper';}
-    if (oneZeroOrTwo === 2) {
-        randomHand = 'scissor'; } 
+    if (computerChoice === 2) {
+        randomHand = 'scissors'; } 
 
 
-    if (userInput === 'rock' && oneZeroOrTwo === 0){
+    if (userInput === 'rock' && randomHand === 'rock'){
         console.log('draw');
-        totalDraw++;
+        totalDraw++;//incrementing. update state
     }
-    else if (userInput === 'rock' && oneZeroOrTwo === 1){
+    else if (userInput === 'rock' && randomHand === 'paper'){
         console.log('lose!');
         totalLose++;
     }
-    else if (userInput === 'rock' && oneZeroOrTwo === 2){
+    else if (userInput === 'rock' && randomHand === 'scissors'){
         console.log(' win!');
         totalWin++;
     }
-    else if (userInput === 'paper' && oneZeroOrTwo === 1){
+    else if (userInput === 'paper' && randomHand === 'paper'){
         console.log('draw');
         totalDraw++;
     }
-    else if (userInput === 'paper' && oneZeroOrTwo === 0){
+    else if (userInput === 'paper' && randomHand === 'rock'){
         console.log('win');
         totalWin++;
     }
-    else if (userInput === 'paper' && oneZeroOrTwo === 2){
+    else if (userInput === 'paper' && randomHand === 'scissors'){
         console.log('lose');
         totalLose++;
     }
-    else if (userInput === 'scissor' && oneZeroOrTwo === 2){
+    else if (userInput === 'scissors' && randomHand === 'scissors'){
         console.log('draw');
         totalDraw++;
     } 
-    else if (userInput === 'scissor' && oneZeroOrTwo === 1){
+    else if (userInput === 'scissors' && randomHand === 'paper'){
         console.log('win');
         totalWin++;
     }   
-    else if (userInput === 'scissor' && oneZeroOrTwo === 0){
+    else if (userInput === 'scissors' && randomHand === 0){
         console.log('lose');
         totalLose++;
 
     }
 
-
+//update DOMx 
     resultSpan.textContent = randomHand;
     sumSpan.classList.remove('hidden');
     correctSPan.textContent = totalWin;

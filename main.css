@@ -2,7 +2,7 @@
     width: 100%;
     height: 80px;
     display: block;
-    background-color: black;
+    background-color: whitesmoke;
 }
 
 .inner_header{
@@ -10,7 +10,7 @@
     height: 100%;
     display: block;
     margin: 0 auto;
-    background-color:lightseagreen;
+    background-color:
 }
 .logo_container
 {
@@ -19,7 +19,7 @@
     float: left;
 }
 .logo_container h1{
-    color: white;
+    color: black;
     height: 100%;
     display: table-cell;
     vertical-align: middle;
@@ -37,9 +37,11 @@
 }
 .paper-image{
     width:150px;
+    border-radius: 50%;
 }
 .scissor-image{
     width: 150px;
+    border-radius: 50%;
 }
 .container{
     margin-top: 50px;
@@ -70,3 +72,6 @@ summary{
     font-size: 16px;
     margin-top: 50px;
 }
+ body{
+     background-color: #487b88;
+ }
