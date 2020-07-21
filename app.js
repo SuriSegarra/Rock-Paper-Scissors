@@ -1,4 +1,9 @@
+
 //get DOM
+
+import { checkResult, rPc, getThrowFromNumber } from './check-result.js';
+
+
 const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset-button');
 const correctSPan = document.getElementById('correct');
@@ -16,6 +21,7 @@ let totalDraw = 0;
 playButton.addEventListener('click', () => {
     
     const radioButton = document.querySelector('input:checked');
+
 
     const userInput = radioButton.value;//user choice, rock paper or scissors
 
@@ -77,6 +83,28 @@ playButton.addEventListener('click', () => {
 
 //update DOMx 
     resultSpan.textContent = randomHand;
+    const userInput = radioButton.value;
+    
+    const computerInput = rPc();
+    
+    const result = checkResult(userInput, computerInput)
+
+    
+    if(result === 'win'){
+        totalWin++
+        correctSPan.textContent = totalWin;   
+    }
+    else if(result === 'lose') {
+        totalLose++
+        totalSpan.textContent = totalLose;
+    }
+    else {
+        totalDraw++
+        drawSpan.textContent = totalDraw;
+    }
+    
+    resultSpan.textContent = computerInput;
+
     sumSpan.classList.remove('hidden');
     correctSPan.textContent = totalWin;
     totalSpan.textContent = totalLose;
