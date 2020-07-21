@@ -2,7 +2,8 @@
     width: 100%;
     height: 80px;
     display: block;
-    background-color: black;
+    background-color: whitesmoke;
+    
 }
 
 .inner_header{
@@ -10,22 +11,23 @@
     height: 100%;
     display: block;
     margin: 0 auto;
-    background-color:lightseagreen;
 }
 .logo_container
 {
     height: 100%;
     display: table;
     float: left;
+    
 }
 .logo_container h1{
-    color: white;
+    color: black;
     height: 100%;
     display: table-cell;
     vertical-align: middle;
     font-family: 'Montserrat';
     font-size: 32px;
     font-weight: 200;
+    text-align: center;
 }
 .logo_container h1 span{
     font-weight: 800;
@@ -37,9 +39,11 @@
 }
 .paper-image{
     width:150px;
+    border-radius: 50%;
 }
 .scissor-image{
     width: 150px;
+    border-radius: 50%;
 }
 .container{
     margin-top: 50px;
@@ -69,4 +73,15 @@ summary{
     text-align: center;
     font-size: 16px;
     margin-top: 50px;
+}
+ body{
+     background-color: #487b88;
+ }
+.container{
+    position: relative;
+    height: 85%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #2c3e50;
 }
